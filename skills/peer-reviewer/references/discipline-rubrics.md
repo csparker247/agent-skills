@@ -172,3 +172,178 @@ Numbered, focused.
 ## Confidence
 {Low | Medium | High}: [one sentence on why]
 ```
+
+---
+
+## Clinical / health sciences
+
+For clinical trials, RCTs, systematic reviews, meta-analyses, epidemiology, public health, health services research, and medical education — fields where claims rest on human subjects data and reporting standards are codified.
+
+```markdown
+# Review: {paper title}
+
+## Summary
+Study design, population, intervention or exposure, primary outcome, and main finding in 2–4 sentences.
+
+## Research question and framing
+Is the question clearly stated and clinically or scientifically meaningful? Is the study design appropriate to the question?
+
+## Study design
+Appropriateness of design to question. Trial registration where applicable. Adequacy of blinding, randomization, and allocation concealment.
+
+## Population and sampling
+Eligibility criteria, recruitment, sample size justification, and representativeness. Does the population support the claimed generalizability?
+
+## Intervention or exposure
+Fidelity, adequacy of comparator, dose/duration where relevant.
+
+## Outcomes
+Are primary and secondary outcomes pre-specified and clinically meaningful? Is measurement valid? Are patient-centered outcomes included where relevant?
+
+## Statistical analysis
+Appropriateness of methods, handling of missing data, multiplicity, and effect sizes with confidence intervals (not p-values alone).
+
+## Reporting standards
+Does the paper follow applicable guidelines (CONSORT, PRISMA, STROBE, etc.)? Are deviations justified?
+
+## Ethics and safety
+IRB approval, informed consent, adverse event reporting, data safety monitoring where applicable.
+
+## Questions for the authors
+Numbered, focused.
+
+## Comments to authors
+[Freeform prose per persona spec]
+
+## Recommendation
+{Accept | Minor revision | Major revision | Reject}: [one-sentence justification]
+
+## Confidence
+{Low | Medium | High}: [one sentence on why]
+```
+
+---
+
+## Economics / econometrics
+
+For applied microeconomics, macroeconomics, labor, development, health, and public economics — fields where the central contribution often turns on the credibility of a causal identification strategy.
+
+```markdown
+# Review: {paper title}
+
+## Summary
+Research question, identification strategy, data source, and main result in 2–4 sentences.
+
+## Contribution
+New identification strategy, new data, new context, or new theory? Is the contribution clearly articulated relative to the literature?
+
+## Identification strategy
+What is the causal claim, and how is it identified? Are identifying assumptions credible and tested? Key design-specific checks: IV (strong first stage, defensible exclusion restriction); RDD (no manipulation at threshold); DiD (parallel trends plausible and tested); structural (assumptions transparent, model well-motivated).
+
+## Data
+Sources, sample construction, variable definitions, measurement error, and appropriateness to the research question.
+
+## Robustness
+Stability across specifications, bandwidth choices, or sample restrictions. Placebo and falsification tests. Standard errors appropriate for the data structure (clustering, heteroskedasticity).
+
+## Economic magnitude
+Are effect sizes economically meaningful? Are welfare or distributional implications discussed?
+
+## Relationship to prior literature
+How do estimates compare to existing work? Are discrepancies explained?
+
+## Questions for the authors
+Numbered, focused.
+
+## Comments to authors
+[Freeform prose per persona spec]
+
+## Recommendation
+{Accept | Minor revision | Major revision | Reject}: [one-sentence justification]
+
+## Confidence
+{Low | Medium | High}: [one sentence on why]
+```
+
+---
+
+## Legal scholarship
+
+For law review articles, doctrinal analysis, constitutional and statutory interpretation, comparative law, legal theory, and empirical legal studies — fields where contribution is made through legal argument, interpretation, and engagement with authority.
+
+```markdown
+# Review: {paper title}
+
+## Summary
+The legal question addressed, the paper's central argument, and its conclusion in 2–4 sentences.
+
+## Doctrinal accuracy
+Are authorities (cases, statutes, regulations, treaties) accurately cited and characterized? Holdings correctly stated? Significant contrary authorities engaged?
+
+## Argument
+Is the central argument valid and well-constructed? Does it engage the strongest counterarguments?
+
+## Treatment of adverse authority
+Does the paper account for controlling or contrary authority? Is the treatment fair and persuasive?
+
+## Normative and descriptive clarity
+Is the paper clear about when it describes existing law versus argues what the law should be? Are normative commitments made explicit?
+
+## Policy and implications
+If policy arguments are made, are they adequately grounded? Are second-order or systemic effects considered?
+
+## Engagement with scholarship
+Is the paper situated within the relevant legal literature, with key interlocutors engaged seriously?
+
+## Questions for the author
+Numbered, focused on the legal argument.
+
+## Comments to author
+[Freeform prose per persona spec]
+
+## Recommendation
+{Accept | Minor revision | Major revision | Reject}: [one-sentence justification]
+
+## Confidence
+{Low | Medium | High}: [one sentence on why]
+```
+
+---
+
+## Arts / practice-based research
+
+For creative writing, studio art, musical composition, performance, film and media practice, and architecture as research — fields where the primary contribution is an artifact or practice, and the review evaluates both the work and the knowledge it produces or embodies.
+
+```markdown
+# Review: {paper title}
+
+## Summary
+The artifact or practice, the research claim it supports, and the contribution in 2–4 sentences.
+
+## Research framing
+Is the relationship between practice and research claim clearly articulated? Is the contribution to practice, to scholarly discourse, or both?
+
+## The work
+Quality of craft and execution relative to the field. Conceptual coherence between artistic choices and stated research aims. Degree of innovation relative to established practice.
+
+## Practice as method
+Is the practice documented in ways that make the research process legible? Are methodological choices explained and justified?
+
+## Contextualization
+Is the work situated within relevant artistic traditions, contemporary practice, and critical discourse?
+
+## Documentation and presentation
+Is the work adequately documented for academic evaluation? For time-based or ephemeral work, does documentation convey what it does and how it functions as research?
+
+## Questions for the authors
+Numbered, focused.
+
+## Comments to authors
+[Freeform prose per persona spec]
+
+## Recommendation
+{Accept | Minor revision | Major revision | Reject}: [one-sentence justification]
+
+## Confidence
+{Low | Medium | High}: [one sentence on why]
+```

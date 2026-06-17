@@ -30,14 +30,18 @@ For multiple files, prioritize the main manuscript and treat supplements as cont
 
 ## Identifying the discipline
 
-Determine the paper's discipline from its abstract, methods, and venue; this drives rubric choice. The four rubric families in `references/discipline-rubrics.md` are:
+Determine the paper's discipline from its abstract, methods, and venue; this drives rubric choice. Rubric families in `references/discipline-rubrics.md`:
 
 - **Empirical sciences** — ML, systems, biology, physics, neuroscience, quantitative social science
 - **Theory / math** — pure math, theoretical CS, formal methods, proof-based work
 - **Humanities** — history, literary studies, philosophy, qualitative interpretive work
 - **Design / qualitative HCI** — HCI, design research, qualitative user studies, mixed-methods
+- **Clinical / health sciences** — clinical trials, RCTs, systematic reviews, epidemiology, public health
+- **Economics / econometrics** — applied micro/macro, labor, development, health economics
+- **Legal scholarship** — doctrinal analysis, statutory interpretation, legal theory, comparative law
+- **Arts / practice-based research** — creative writing, studio art, composition, performance, architecture-as-research
 
-For cross-disciplinary work (digital humanities, computational social science, etc.), pick the dominant methodology or blend the two closest rubrics. Default to **Empirical sciences** if genuinely unsure.
+For cross-disciplinary work, blend the two closest rubrics. Default to **Empirical sciences** if unsure.
 
 ## Output
 
