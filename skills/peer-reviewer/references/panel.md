@@ -5,11 +5,11 @@ When `/peer-reviewer:panel` is invoked, run all three reviewers independently, t
 ## Steps
 
 1. **Determine discipline** from the paper (see `discipline-rubrics.md`). Do this once and use the same rubric for all three reviewers — they're reviewing the same paper for the same venue.
-2. **Generate Reviewer One's review.** Follow `reviewer-one.md` exactly. Write to `/mnt/user-data/outputs/review-one-{shortname}.md`.
-3. **Generate Reviewer Two's review.** Follow `reviewer-two.md`. Write to `review-two-{shortname}.md`.
-4. **Generate Reviewer Three's review.** Follow `reviewer-three.md`. Write to `review-three-{shortname}.md`.
-5. **Generate the meta-review** (spec below). Write to `meta-review-{shortname}.md`.
-6. **Present all four files** via `present_files`, in this order: meta-review first (so the user sees the synthesis on top), then reviewers one/two/three.
+2. **Generate Reviewer One's review.** Follow `reviewer-one.md` exactly.
+3. **Generate Reviewer Two's review.** Follow `reviewer-two.md`.
+4. **Generate Reviewer Three's review.** Follow `reviewer-three.md`.
+5. **Generate the meta-review** (spec below).
+6. **Deliver all four documents** in this order: meta-review first (so the user sees the synthesis on top), then reviewers one/two/three. Use whatever delivery mechanism the platform supports (write to files, return inline, stream, etc.).
 
 Each reviewer is generated as an independent pass. Don't let them coordinate or reference each other's reviews — they should sometimes agree, sometimes disagree, and the disagreements are part of what makes a panel useful. (In real venues, reviewers don't see each other's reviews until after submission.)
 

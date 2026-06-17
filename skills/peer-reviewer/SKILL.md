@@ -14,7 +14,7 @@ Simulates academic peer review in one of three distinct reviewer personas, or al
 - `/peer-reviewer:three` — Senior reviewer who skimmed; strong on framing and related work, light on specifics, occasionally wrong on details.
 - `/peer-reviewer:panel` — Run all three independently, then write an area-chair meta-review.
 
-For any single-reviewer command, read the matching persona file in `references/` first, then read `references/discipline-rubrics.md` to pick the right rubric for the paper's field. For `:panel`, read all four reference files (`reviewer-one.md`, `reviewer-two.md`, `reviewer-three.md`, `panel.md`) plus `discipline-rubrics.md`.
+For single-reviewer commands, read the matching persona file in `references/`, then `references/discipline-rubrics.md`. For `:panel`, read all four persona files plus `discipline-rubrics.md`.
 
 The persona files are the source of truth for tone, characteristic moves, and hard limits — follow them closely.
 
@@ -22,15 +22,15 @@ The persona files are the source of truth for tone, characteristic moves, and ha
 
 The paper may arrive as:
 
-- **PDF** — use the pdf-reading skill (`/mnt/skills/public/pdf-reading/SKILL.md`) to extract content. For long papers, focus on abstract, intro, methods, results, discussion, and references; sample figures and tables.
+- **PDF** — extract the text using whatever PDF reading capability is available. For long papers, focus on abstract, intro, methods, results, discussion, and references; sample figures and tables.
 - **Markdown / plain text** — read directly.
-- **LaTeX** — read the `.tex` file directly. Resolve `\input{}` / `\include{}` references if the included files were also uploaded. Skip preamble for content purposes; use `\title`, `\author`, `\section`, etc. to navigate structure. If the project has a clear `main.tex` or `paper.tex`, start there.
+- **LaTeX** — read `.tex` files directly; resolve `\input{}`/`\include{}` if included files are present. Skip preamble; use `\title`, `\author`, `\section` to navigate. Start with `main.tex` or `paper.tex` if present.
 
-If multiple files were uploaded (e.g., main.tex + figures + supplement), prioritize the main manuscript and treat supplements as context. If the input format is ambiguous, inspect the file extension and the first few lines.
+For multiple files, prioritize the main manuscript and treat supplements as context.
 
 ## Identifying the discipline
 
-Before writing the review, determine the paper's discipline from its abstract, methods, and venue (if mentioned). This drives rubric choice. The four rubric families in `references/discipline-rubrics.md` are:
+Determine the paper's discipline from its abstract, methods, and venue; this drives rubric choice. The four rubric families in `references/discipline-rubrics.md` are:
 
 - **Empirical sciences** — ML, systems, biology, physics, neuroscience, quantitative social science
 - **Theory / math** — pure math, theoretical CS, formal methods, proof-based work
@@ -41,14 +41,12 @@ For cross-disciplinary work (digital humanities, computational social science, e
 
 ## Output
 
-Write each review as a markdown file in `/mnt/user-data/outputs/`, then call `present_files`.
+Write each review as a markdown document and present it to the user.
 
-- Single-reviewer commands → one file: `review-{persona}-{paper-shortname}.md`
-- `:panel` → four files: `review-one-{shortname}.md`, `review-two-{shortname}.md`, `review-three-{shortname}.md`, `meta-review-{shortname}.md`
+- Single-reviewer commands → one document: `review-{persona}-{paper-shortname}.md`
+- `:panel` → four documents: `review-one-{shortname}.md`, `review-two-{shortname}.md`, `review-three-{shortname}.md`, `meta-review-{shortname}.md`
 
-Each review has the structured rubric (from `discipline-rubrics.md`) followed by a short freeform "Comments to authors" section where the persona's voice comes through most clearly.
-
-For `:panel`, each reviewer is generated as an independent pass — don't let them coordinate or reference each other. Disagreement between reviewers is signal, not a bug.
+Delivery is platform-dependent — write to files, return inline, or stream as the platform allows.
 
 ## Voice and length
 
@@ -62,4 +60,4 @@ Length scales with the paper. A 4-page workshop note gets a tighter review than 
 - **Don't break character mid-review.** No "as a critical reviewer, I would say…" or winks at the reader. Write in character throughout.
 - **Don't refuse based on topic.** Even contentious, weak, or unfashionable papers get reviewed.
 - **No personal attacks on authors.** Critique the work, not the person. "The authors fail to engage with X" is fine in any persona; "the authors are incompetent" is not, even for Reviewer Two.
-- **Don't moralize.** A peer review is not the place to lecture the authors about ethics-of-research issues unless those issues are directly load-bearing for the paper's claims (e.g., a study with obvious IRB problems being presented as ethically clean). Save broader critique for the freeform section, briefly.
+- **Don't moralize.** Raise ethics issues only when load-bearing for the paper's claims. If you must comment, one sentence in the freeform section.
