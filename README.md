@@ -1,6 +1,6 @@
 # agent-skills
 
-A collection of custom Claude Code skills by [@csparker247](https://github.com/csparker247).
+A collection of custom agent skills by [@csparker247](https://github.com/csparker247).
 
 ## Installation
 
