@@ -14,8 +14,8 @@ Simulates academic peer review in one of five distinct reviewer personas, or a f
 - `/peer-reviewer:three` — Senior reviewer who skimmed; strong on framing, light on specifics, occasionally wrong on details.
 - `/peer-reviewer:four` — Methodologist: evaluates only whether methods support claims; ignores novelty, framing, and writing.
 - `/peer-reviewer:five` — Cross-disciplinary reviewer: expert in the paper's application domain; evaluates problem formulation, domain knowledge, and claimed implications from the target field's perspective.
-- `/peer-reviewer:eval` — Run pre-evaluation only: determine discipline, produce a paper summary and key claims. Useful before committing to a full review run, or as the first step in a parallel workflow.
-- `/peer-reviewer:panel` — Run pre-evaluation, then reviewers one, two, three independently, then write an area-chair meta-review. Add reviewer numbers to include others (e.g. `/peer-reviewer:panel four five`). Runs sequentially by default; invoke as a Workflow for parallel reviewer execution.
+- `/peer-reviewer:eval` — Run pre-evaluation only: determine discipline, produce a paper summary and key claims. Useful before committing to a full review run, or as a shared first step before running reviewers in parallel.
+- `/peer-reviewer:panel` — Run pre-evaluation, then reviewers one, two, three independently, then write an area-chair meta-review. Add reviewer numbers to include others (e.g. `/peer-reviewer:panel four five`). Runs sequentially by default; parallel execution is available on platforms that support concurrent agents.
 
 For any command, run pre-evaluation first per `references/pre-evaluation.md`, then read the matching persona file(s) and `references/discipline-rubrics.md`.
 

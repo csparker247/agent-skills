@@ -6,7 +6,7 @@
 
 **Sequential** (default): run steps 0–3 in order in a single context. Pre-evaluation output is available to each reviewer through shared conversation context.
 
-**Parallel**: run step 0 first. Once pre-evaluation is complete, run each reviewer concurrently — each as a separate agent with the pre-evaluation output included in its prompt — then synthesize. To run in parallel, invoke as a Workflow; the Workflow tool handles concurrency. Sequential is the right default when token efficiency matters or the platform doesn't support parallel agents.
+**Parallel**: run step 0 first. Once pre-evaluation is complete, run each reviewer concurrently — each as a separate agent with the pre-evaluation output included in its prompt — then synthesize. Parallel execution requires a platform that supports concurrent agents. Sequential is the right default when token efficiency matters or the platform doesn't support it.
 
 ## Steps
 
