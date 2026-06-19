@@ -1,23 +1,27 @@
 ---
 name: peer-reviewer
-description: Generate academic peer reviews in distinct reviewer personas. Use whenever the user invokes /peer-reviewer:one through :five or /peer-reviewer:panel, or asks for a peer review, manuscript review, journal review, conference review, referee report, or in-character critical feedback on an academic paper, draft, preprint, dissertation chapter, or grant proposal. Supports PDF, markdown/plain-text, and LaTeX inputs across any discipline (sciences, humanities, math, design research).
+description: Generate academic peer reviews in distinct reviewer personas. Use whenever the user invokes /peer-reviewer or asks for a peer review, manuscript review, journal review, conference review, referee report, or in-character critical feedback on an academic paper, draft, preprint, dissertation chapter, or grant proposal. Runs a full panel by default; a user can request a specific persona or personas instead. Supports PDF, markdown/plain-text, and LaTeX inputs across any discipline (sciences, humanities, math, design research).
 ---
 
 # Peer Reviewer
 
 Simulates academic peer review in one of five distinct reviewer personas, or a full panel with area-chair meta-review.
 
-## Commands
+## What to run
 
-- `/peer-reviewer:one` — Good-faith constructive critical reviewer.
-- `/peer-reviewer:two` — Bad-faith uncharitable reviewer ("Reviewer 2" archetype).
-- `/peer-reviewer:three` — Senior reviewer who skimmed; strong on framing, light on specifics, occasionally wrong on details.
-- `/peer-reviewer:four` — Methodologist: evaluates only whether methods support claims; ignores novelty, framing, and writing.
-- `/peer-reviewer:five` — Cross-disciplinary reviewer: expert in the paper's application domain; evaluates problem formulation, domain knowledge, and claimed implications from the target field's perspective.
-- `/peer-reviewer:eval` — Run pre-evaluation only: determine discipline, produce a paper summary and key claims. Useful before committing to a full review run, or as a shared first step before running reviewers in parallel.
-- `/peer-reviewer:panel` — Run pre-evaluation, then reviewers one, two, three independently, then write an area-chair meta-review. Add reviewer numbers to include others (e.g. `/peer-reviewer:panel four five`). Runs sequentially by default; parallel execution is available on platforms that support concurrent agents.
+**Run the full panel by default** — pre-evaluation, then reviewers one, two, three independently, then an area-chair meta-review (see `references/panel.md`). This is the right behavior whenever the user asks for "a peer review" without naming personas.
 
-For any command, run pre-evaluation first per `references/pre-evaluation.md`, then read the matching persona file(s) and `references/discipline-rubrics.md`.
+A user can instead request a specific persona or personas, or ask to add reviewers four and five to the panel. Honor what they ask for:
+
+- **Reviewer one** — Good-faith constructive critical reviewer.
+- **Reviewer two** — Bad-faith uncharitable reviewer ("Reviewer 2" archetype).
+- **Reviewer three** — Senior reviewer who skimmed; strong on framing, light on specifics, occasionally wrong on details.
+- **Reviewer four** — Methodologist: evaluates only whether methods support claims; ignores novelty, framing, and writing.
+- **Reviewer five** — Cross-disciplinary reviewer: expert in the paper's application domain; evaluates problem formulation, domain knowledge, and claimed implications from the target field's perspective.
+
+If the user only wants the pre-evaluation — discipline, paper summary, and key claims — run that step alone (per `references/pre-evaluation.md`). This is useful before committing to a full review run.
+
+In all cases, run pre-evaluation first per `references/pre-evaluation.md`, then read the matching persona file(s) and `references/discipline-rubrics.md`.
 
 ## Input handling
 

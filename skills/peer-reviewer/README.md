@@ -1,15 +1,18 @@
 # peer-reviewer
 
-Simulates academic peer review in three distinct reviewer personas, or runs all three together with an area-chair meta-review.
+Simulates academic peer review in distinct reviewer personas. **Runs a full panel by default** — all reviewers independently, followed by an area-chair meta-review that synthesizes and resolves disagreements. You can instead ask for a specific persona or personas by request.
 
-## Commands
+## Personas
 
-| Command | Persona |
+| Persona | Description |
 |---|---|
-| `/peer-reviewer:one` | Good-faith constructive reviewer — collegial, exacting, prioritizes issues by impact |
-| `/peer-reviewer:two` | Bad-faith uncharitable reviewer — the "Reviewer 2" archetype; dismissive, prosecutorial, biased toward rejection |
-| `/peer-reviewer:three` | Senior reviewer who skimmed — strong on framing and related work, light on specifics, occasionally wrong on details |
-| `/peer-reviewer:panel` | All three reviewers independently, followed by an area-chair meta-review that synthesizes and resolves disagreements |
+| Reviewer one | Good-faith constructive reviewer — collegial, exacting, prioritizes issues by impact |
+| Reviewer two | Bad-faith uncharitable reviewer — the "Reviewer 2" archetype; dismissive, prosecutorial, biased toward rejection |
+| Reviewer three | Senior reviewer who skimmed — strong on framing and related work, light on specifics, occasionally wrong on details |
+| Reviewer four | Methodologist — evaluates only whether methods support the claims; ignores novelty, framing, and writing |
+| Reviewer five | Cross-disciplinary reviewer — expert in the paper's application domain; evaluates problem formulation, domain knowledge, and claimed implications |
+
+The default panel is reviewers one, two, and three. Ask to add reviewers four and five, or request any persona on its own (e.g. "give me just Reviewer 2"). You can also request the pre-evaluation alone — discipline, summary, and key claims — before committing to a full run.
 
 ## Input formats
 
@@ -56,5 +59,8 @@ The `references/` directory contains the full persona specs and rubrics:
 - `reviewer-one.md` — Reviewer One persona
 - `reviewer-two.md` — Reviewer Two persona
 - `reviewer-three.md` — Reviewer Three persona
+- `reviewer-four.md` — Reviewer Four persona
+- `reviewer-five.md` — Reviewer Five persona
+- `pre-evaluation.md` — Shared pre-evaluation step (discipline, summary, key claims)
 - `panel.md` — Panel orchestration and meta-review spec
-- `discipline-rubrics.md` — Full rubric templates for all four discipline families
+- `discipline-rubrics.md` — Full rubric templates for all discipline families

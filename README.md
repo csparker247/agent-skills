@@ -12,8 +12,8 @@ npx skills add csparker247/agent-skills
 
 ### `peer-reviewer`
 
-Simulates academic peer review in three distinct reviewer personas, individually or as a full panel with an area-chair meta-review. Supports PDF, Markdown, plain text, and LaTeX inputs across any discipline.
+Simulates academic peer review in distinct reviewer personas. Runs a full panel by default — all reviewers independently, followed by an area-chair meta-review — or you can request a specific persona or personas by name. Supports PDF, Markdown, plain text, and LaTeX inputs across any discipline.
 
-**Commands:** `/peer-reviewer:one` · `/peer-reviewer:two` · `/peer-reviewer:three` · `/peer-reviewer:panel`
+**Invoke:** `/peer-reviewer`
 
 See [`skills/peer-reviewer/README.md`](skills/peer-reviewer/README.md) for full documentation.

@@ -1,6 +1,6 @@
 # Panel: Reviewers plus an area-chair meta-review
 
-**Default panel**: reviewers one, two, three. Add four or five by naming them (e.g. `/peer-reviewer:panel four five`).
+**Default panel**: reviewers one, two, three. Add reviewers four or five when the user asks for them.
 
 ## Execution modes
 
