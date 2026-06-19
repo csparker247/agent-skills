@@ -9,49 +9,45 @@ Simulates academic peer review in one of five distinct reviewer personas, or a f
 
 ## What to run
 
-**Run the full panel by default** — pre-evaluation, then reviewers one, two, three independently, then an area-chair meta-review (see `references/panel.md`). This is the right behavior whenever the user asks for "a peer review" without naming personas.
+**Run the full panel by default** — pre-evaluation, then reviewers one, two, three independently, then an area-chair meta-review (see `references/panel.md`). Use this whenever the user asks for "a peer review" without naming personas.
 
-A user can instead request a specific persona or personas, or ask to add reviewers four and five to the panel. Honor what they ask for:
+The user can instead request specific personas, or add reviewers four and five. Honor what they ask:
 
 - **Reviewer one** — Good-faith constructive critical reviewer.
 - **Reviewer two** — Bad-faith uncharitable reviewer ("Reviewer 2" archetype).
 - **Reviewer three** — Senior reviewer who skimmed; strong on framing, light on specifics, occasionally wrong on details.
 - **Reviewer four** — Methodologist: evaluates only whether methods support claims; ignores novelty, framing, and writing.
-- **Reviewer five** — Cross-disciplinary reviewer: expert in the paper's application domain; evaluates problem formulation, domain knowledge, and claimed implications from the target field's perspective.
+- **Reviewer five** — Cross-disciplinary reviewer: expert in the paper's application domain; evaluates problem formulation, domain knowledge, and claimed implications from the target field.
 
-If the user only wants the pre-evaluation — discipline, paper summary, and key claims — run that step alone (per `references/pre-evaluation.md`). This is useful before committing to a full review run.
+If the user only wants the pre-evaluation — discipline, summary, and key claims — run that step alone.
 
-In all cases, run pre-evaluation first per `references/pre-evaluation.md`, then read the matching persona file(s) and `references/discipline-rubrics.md`.
+Always run pre-evaluation first (`references/pre-evaluation.md`); it selects the session's discipline and **common structure** from the rubric table, defaulting to Empirical sciences if unsure and blending the two closest for cross-disciplinary work. Then read the matching persona file(s) and the one matching content guide in `references/rubrics/`.
 
 ## Input handling
 
 - **PDF** — extract text; for long papers focus on abstract, intro, methods/arguments, results/conclusions, discussion, references.
 - **Markdown / plain text** — read directly.
-- **LaTeX** — read `.tex` files; resolve `\input{}`/`\include{}` if present; start with `main.tex` or `paper.tex` or ask the user if these are not found.
+- **LaTeX** — read `.tex` files; resolve `\input{}`/`\include{}`; start with `main.tex` or `paper.tex`, or ask if not found.
 
-## Identifying the discipline
+## Output rule (all reviewers)
 
-Determine from abstract, methods, and venue. See `references/discipline-rubrics.md` for rubric families. Blend the two closest rubrics for cross-disciplinary work. Default to **Empirical sciences** if unsure.
-
-## Output
-
-Each review uses the **common structure** the pre-evaluation selected for the session (see `references/pre-evaluation.md` and the *Concise default structure* in `references/discipline-rubrics.md`). Every reviewer in a panel shares that structure; only voice and emphasis differ.
+Every reviewer uses the session's **common structure** (selected in pre-evaluation) and stays within the length budget below. Fold numbered questions and author-facing comments into the structure's sections — never add headings beyond it. End on the **shared tail** (Recommendation / Confidence, defined in `references/pre-evaluation.md`). Each persona file states only how it *deviates* — where it spends its budget and how it biases Recommendation and Confidence.
 
 ### Length
 
-Reviews are concise by default — closer to a real referee report than a review article.
+Concise by default — closer to a real referee report than a review article.
 
-- **Target ~500 words** for a typical paper. Scale with the paper: down to ~300 for a short workshop note, up to a **hard cap of ~800 words** for a long archival submission. The cap is a ceiling, not a goal — aim for the target, never pad toward the cap.
-- **Meta-review**: its own tighter **~500-word cap** (it synthesizes, so it should be shorter than reading the reviews themselves).
-- **Verbosity override**: when the user asks for a detailed/thorough review — or, sparingly, when a persona would otherwise have to omit a load-bearing concern to fit — raise the reviewer cap to **~1500 words**. The override is **length only**: reviewers develop the same sections more fully, never add headings beyond the selected structure. The meta-review scales up conservatively (toward ~800) and stays the tightest element in the panel.
+- **Target ~500 words** for a typical paper; scale down to ~300 for a short workshop note, up to a **hard cap of ~800 words** for a long archival submission. The cap is a ceiling, not a goal — never pad toward it.
+- **Meta-review**: its own tighter **~500-word cap** — it synthesizes, so it should be shorter than reading the reviews.
+- **Verbosity override**: when the user asks for a detailed review — or, sparingly, when a persona would otherwise omit a load-bearing concern — raise the reviewer cap to **~1500 words**. Length only: develop the same sections more fully, never add headings. The meta-review scales up conservatively (toward ~800) and stays the tightest element.
 
 ### Files and console
 
 When file writing is available:
 
 - Write every review to its own file — single reviewer → `review-{persona}-{shortname}.md`; panel → `review-one-{shortname}.md` … and `meta-review-{shortname}.md`.
-- **Panel console output**: print the meta-review verbatim (it is the synthesis — do not re-summarize it), followed by a one-line verdict per reviewer (e.g. `Reviewer Two — Reject, High confidence`) and the list of review filenames. The full reviews stay in the files for the user to open on demand.
-- **Single-persona console output**: print that review directly (it's within the cap; there's nothing to synthesize).
+- **Panel console**: print the meta-review verbatim (it is the synthesis — do not re-summarize it), then a one-line verdict per reviewer (e.g. `Reviewer Two — Reject, High confidence`) and the review filenames.
+- **Single-persona console**: print that review directly (it's within the cap; there's nothing to synthesize).
 
 Where file writing isn't available (some web contexts), return the reviews inline instead.
 

@@ -17,7 +17,7 @@
 
 ## The meta-review
 
-You are the area chair. You've read all reviews and the paper. Synthesize — don't add another independent reviewer voice. Keep it tight: a **~500-word cap** (scaling up only conservatively, toward ~800, under a verbosity override). The synthesis should be shorter than reading the reviews themselves.
+You are the area chair. You've read all reviews and the paper. Synthesize — don't add another independent reviewer voice. Keep it tight: stay within the meta-review cap in `SKILL.md` (the synthesis should be shorter than reading the reviews themselves).
 
 ```markdown
 # Meta-review: {shortname from pre-evaluation}

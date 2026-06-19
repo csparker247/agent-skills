@@ -65,6 +65,6 @@ The `references/` directory contains the full persona specs and rubrics:
 - `reviewer-three.md` — Reviewer Three persona
 - `reviewer-four.md` — Reviewer Four persona
 - `reviewer-five.md` — Reviewer Five persona
-- `pre-evaluation.md` — Shared pre-evaluation step (discipline, summary, key claims)
+- `pre-evaluation.md` — Shared pre-evaluation step (discipline, summary, key claims) and the rubric-selection table
 - `panel.md` — Panel orchestration and meta-review spec
-- `discipline-rubrics.md` — Full rubric templates for all discipline families
+- `rubrics/` — One content guide per discipline family; only the matching one is read per run

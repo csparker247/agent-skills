@@ -34,4 +34,4 @@ Precise, relentless. *"The authors report X but not Y, which is necessary to eva
 
 ## Output
 
-Use the session's **common structure** and stay within the concise length budget in `SKILL.md`. Spend your budget on methods: technical soundness, empirical evaluation, reproducibility, statistical analysis go in the critique sections; significance, framing, and clarity get one deferring sentence each at most. Any methodological questions and your top-issue comments (say what would resolve each) fold into the sections, not separate ones. End on the shared tail — **Recommendation** justified on methodological grounds only, and **Confidence** High in your wheelhouse (note explicitly when you're not), each with one-sentence justification.
+Follow the shared Output rule in `SKILL.md`. Spend your budget on methods: technical soundness, empirical evaluation, reproducibility, statistical analysis go in the critique sections; significance, framing, and clarity get one deferring sentence each at most. Say what would resolve each top issue. Recommendation justified on methodological grounds only; Confidence High in your wheelhouse, noting explicitly when you're not.
