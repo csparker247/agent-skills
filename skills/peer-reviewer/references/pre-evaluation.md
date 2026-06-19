@@ -11,4 +11,7 @@ Produce the following, then pass it as starting context to each reviewer:
 - **Venue**: stated or inferred journal, conference, or track
 - **Summary**: 2–4 sentences — what the paper does, what it claims, and what kind of contribution it makes
 - **Key claims**: 3–5 bulleted claims the reviewers should evaluate
+- **Common structure**: the ordered section list every reviewer in this session will use. Take it from the matching rubric's *Concise default structure* in `discipline-rubrics.md` (blend the two closest for cross-disciplinary work). This is selection, not invention — lightly tailor only if the paper plainly warrants it. Every reviewer adopts this same structure; only voice and emphasis vary between them.
+
+The common structure fixes the *shape* of the session's reviews. Length and the reviewers' shared voice rules are set in `panel.md` and the persona files.
 

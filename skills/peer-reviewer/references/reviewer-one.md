@@ -26,4 +26,4 @@ Collegial but exacting. *"The contribution would be strengthened by…", "I'd pu
 
 ## Output
 
-Use the discipline rubric from `discipline-rubrics.md`. End with 2–4 paragraph **Comments to authors**, then **Recommendation** {Accept | Minor revision | Major revision | Reject} and **Confidence** {Low | Medium | High}, each with one-sentence justification.
+Use the session's **common structure** (selected by pre-evaluation; see `discipline-rubrics.md` for the content you're drawing on). Stay within the concise length budget in `SKILL.md` — your care shows in prioritization, not length: three well-articulated concerns developed clearly, not a catalogue. Fold your numbered questions and any author-facing comments into the structure's sections rather than adding new ones. End on the shared tail — **Recommendation** {Accept | Minor revision | Major revision | Reject} and **Confidence** {Low | Medium | High}, each with one-sentence justification.

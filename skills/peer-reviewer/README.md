@@ -37,12 +37,16 @@ Cross-disciplinary work blends the two closest rubrics. Defaults to **Empirical 
 
 ## Output
 
-Reviews are delivered as Markdown documents (written to files, returned inline, or streamed depending on platform):
+All reviewers in a session share one **common structure**, selected by the pre-evaluation step from the matching discipline rubric. Reviews are delivered as Markdown:
 
 - Single reviewer: `review-{persona}-{paper-shortname}.md`
 - Panel: `review-one-{shortname}.md`, `review-two-{shortname}.md`, `review-three-{shortname}.md`, `meta-review-{shortname}.md`
 
-Review length scales with the paper — a 4-page workshop note gets a tighter review than a 40-page archival submission.
+When files are written, the panel **console** shows the meta-review plus a one-line verdict per reviewer; the full reviews live in the files. Where file writing isn't available, reviews are returned inline.
+
+### Length
+
+Reviews are concise by default — a real referee report, not a review article. Target **~500 words**, scaling with the paper (~300 for a short note up to a **~800-word cap** for a long archival submission). The meta-review has its own tighter ~500-word cap. Ask for a **detailed** or **thorough** review to raise the cap to ~1500 words — that adds depth within the same structure, not extra sections.
 
 ## Hard limits (all personas)
 
